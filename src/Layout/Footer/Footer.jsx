@@ -1,35 +1,42 @@
-//  import logo from'../../assets/logo.jpeg'
+// import logo from '../../assets/FSB-Colored.png'
+import { FaFacebook } from "react-icons/fa";
+
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white rounded-lg shadow dark:bg-gray-900 m-4">
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="https://mbf-shop.web.app/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                        {/* <img src={logo} className="h-24 rounded-full" alt="Flowbite Logo" /> */}
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fire Safety</span>
-                    </a>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">About</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                    © 2024 <a href="https://mbf-shop.web.app/" className="hover:underline">MBF Shop™</a>. All Rights Reserved.
-                </span>
-            </div>
-        </footer>
+        <footer className="footer footer-center bg-gray-900 text-primary-content p-10">
+  <aside>
+ <div className="bg-blue-700 rounded-full p-4">
+ <FaFacebook className='text-3xl' />
+ {/* <a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          className="fill-current">
+          <path
+            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+        </svg>
+</a> */}
+ </div>
+    <p className="font-bold font-hind text-2xl mt-4">
+    অর্ডার করতে সমস্যা হলে অনুগ্রহ করে আমাদের পেইজে মেসেজ করবেন
+      <br />
+       <div className='flex justify-center items-center py-12'>
+       <img className='w-24 h-24  '  src= 'https://firesafety.trustable.shop/wp-content/uploads/2024/01/Usabel-PNG-Preset-957x1024.png' alt="" />
+       </div>
+    </p>
+    <p className='text-xs md:text-xl'><span className='text-orange-500'>Fire Safety Bangladesh </span>বাংলাদেশে আগুন নিরাপত্তা বিষয়ে কাজ করে যাচ্ছে। আমাদের লক্ষ্য দেশের সর্বত্র <br /> আগুন
+         নিরাপত্তা সম্পর্কে সচেতনতা তৈরি করা এবং প্রয়োজনমাফিক আগুন নিরাপত্তা সরঞ্জাম 
+        সরবরাহ করা। আর <br /> একটিও পরিবারও যেন আগুন দূর্ঘটনার শিকার না হয়, এটিই আমাদের চাওয়া....</p>
+
+    <p className='text-xl mt-2'>Privacy Policy
+   <span className=' ml-12 '> Refund and Returns Policy</span></p>
+
+  </aside>
+  
+</footer>
     );
 };
 
