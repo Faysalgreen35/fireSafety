@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
 
 import logo from '../../assets/FSB-Colored.png'
@@ -14,6 +15,7 @@ import FormData from "../FormData/FormData";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the AOS CSS file
 import { useEffect } from "react";
+import FAQAccordion from "../FAQAccordion/FAQAccordion";
 
 const Home = () => {
 
@@ -36,19 +38,17 @@ const Home = () => {
             <section>
                 <div className="bg-red-100 grid grid-cols-1 md:grid-cols-2 px-2 justify-center mx-auto md:px-12">
                     <div className=" py-6 md:py-32 font-hind">
-                        <h1 className="text-2xl text-center md:text-5xl mt-1 ml-0 md:ml-4 font-bold text-black"
-                        data-aos="fade-down"
-                        >
-                            আগুন থেকে পরিবারকে রাখুন <br />  নিরাপদ !
+                        <h1 className="text-2xl text-center md:text-left  md:text-4xl mt-1 ml-0 md:ml-10 font-bold text-black"
+                            data-aos="fade-down"
+                        >আগুন থেকে পরিবারকে রাখুন <br />  নিরাপদ !
                         </h1>
-                        <h4 className="text-sm md:text-3xl text-center font-semibold ml-0 md:ml-4 w-full mt-4 ">
-                            বিবিসি এর তথ্যমতে, বাংলাদেশে প্রতিবছর <br /> আনুমানিক ৬ লাখ মানুষ অগ্নি দূর্ঘটনার শিকার <br /> হন।
+                        <h4 className="text-sm md:text-2xl text-center md:text-left font-semibold ml-0 md:ml-10 w-full mt-4 ">বিবিসি এর তথ্যমতে, বাংলাদেশে প্রতিবছর <br /> আনুমানিক ৬ লাখ মানুষ অগ্নি দূর্ঘটনার শিকার <br /> হন।
                             এই আগুনের পুড়ে যাওয়া রোগীদের<span className="text-orange-500"> ৭০ ভাগই </span><br /><span className="text-orange-500"> নারী এবং শিশু
                             </span> </h4>
 
                     </div>
                     <div className="mr-0 md:mr-12 mt-2 md:mt-12 mb-12 md:mb-0"
-                    data-aos="fade-up"
+                        data-aos="fade-up"
                     >
                         <img className="  " src={second} alt="" />
                     </div>
@@ -60,9 +60,9 @@ const Home = () => {
             <section>
                 <div className="grid grid-cols-1 md:grid-cols-2 bg-[rgb(207,97,46)] py-2 md:py-24 px-0   md:px-12  ">
                     <div className="   flex justify-center items-center mt-2 md:mt-12 ml-0 md:ml-12"
-                      data-aos="fade-up"
+                        data-aos="fade-up"
                     >
-                        <img className=" w-[400px] md:w-[500px]  " src={third} alt="" />
+                        <img className=" w-[400px] md:w-[550px]  " src={third} alt="" />
                     </div>
                     <div className="py-12 mr-0 md:mr-14 mt-2 font-hind">
                         <h1 className="hidden md:block text-2xl text-center md:text-5xl  font-bold text-white">
@@ -71,19 +71,19 @@ const Home = () => {
                         <h1 className="md:hidden text-2xl text-center md:text-5xl  font-bold text-white">
                             আমাদের অধিকাংশই অগ্নি- <br />দূর্ঘটনা প্রতিরোধের ব্যাপারে অসচেতন
                         </h1>
-                        <h4 className=  " hidden md:block text-m text-white text-center font-bold flex-wrap  mt-4"
-                          data-aos="fade-down-left"
-                        
+                        <h4 className=" hidden md:block text-m text-white text-center font-bold flex-wrap  mt-4"
+                            data-aos="fade-down-left"
+
                         >
                             এজন্য প্রায়ই আমাদের দেশে অসংখ্য অনাকাঙ্খিত আগুনের ঘটনা ঘটছে। ঝরে <br />
-                             যাচ্ছে অসংখ্য প্রাণ এবং ক্ষতি হচ্ছে সম্পদের। অথচ পর্যাপ্ত প্রস্তুতি থাকলে এসকল <br /> দুর্ঘটনা অনেকাংশেই কমে যেত
-                             </h4>
+                            যাচ্ছে অসংখ্য প্রাণ এবং ক্ষতি হচ্ছে সম্পদের। অথচ পর্যাপ্ত প্রস্তুতি থাকলে এসকল <br /> দুর্ঘটনা অনেকাংশেই কমে যেত
+                        </h4>
                         <h4 className="md:hidden text-sm mx-4 text-white text-center font-bold flex-wrap  mt-4"
-                          data-aos="fade-down-right"
+                            data-aos="fade-down-right"
                         >
-                            এজন্য প্রায়ই আমাদের দেশে অসংখ্য অনাকাঙ্খিত আগুনের ঘটনা ঘটছে। ঝরে  
-                             যাচ্ছে অসংখ্য প্রাণ এবং ক্ষতি হচ্ছে সম্পদের। অথচ পর্যাপ্ত প্রস্তুতি থাকলে এসকল   দুর্ঘটনা অনেকাংশেই কমে যেত
-                             </h4>
+                            এজন্য প্রায়ই আমাদের দেশে অসংখ্য অনাকাঙ্খিত আগুনের ঘটনা ঘটছে। ঝরে
+                            যাচ্ছে অসংখ্য প্রাণ এবং ক্ষতি হচ্ছে সম্পদের। অথচ পর্যাপ্ত প্রস্তুতি থাকলে এসকল   দুর্ঘটনা অনেকাংশেই কমে যেত
+                        </h4>
 
                     </div>
 
@@ -93,8 +93,8 @@ const Home = () => {
             <section>
                 <div className="grid grid-cols-1 md:grid-cols-2 bg-red-100 py-2 md:py-12  ">
                     <div className="py-12  mt-20 font-semibold px-4 md:px-12 ml-1 font-hind">
-                        <h1 className="text-xl md:text-3xl ml-2   text-black"
-                          data-aos="fade-left"
+                        <h1 className="text-xl md:text-2xl ml-0 md:ml-12   text-black"
+                            data-aos="fade-left"
                         >
                             এদিকে, International Association of Fire and Rescue Services (CTIF) এর রিপোর্ট বলছে, সারাবিশ্বে প্রতিবছর লক্ষাধিক গাড়িতে অগ্নি-দূর্ঘটনা ঘটে থাকে।<span className="text-orange-500"> শুধুমাত্র আমেরিকাতেই প্রতিবছর প্রাণ হারাণ ৫৬০ জন।</span>
                         </h1>
@@ -111,7 +111,7 @@ const Home = () => {
             <section>
                 <div className="grid grid-cols-1 md:grid-cols-2 bg-[rgb(207,97,46)] py-4 md:py-24 px-4 md:px-12  ">
                     <div className="mt-4 md:mt-12 ml-0 md:ml-12"
-                      data-aos="fade-down-right"
+                        data-aos="fade-down-right"
                     >
                         <img className=" w-[500px]  " src={five} alt="" />
                     </div>
@@ -120,15 +120,15 @@ const Home = () => {
                             আগুন প্রতিরোধের উপায় কি?
                         </h1>
                         <h4 className="hidden md:block text-l py-2  text-white text-center font-bold   mt-4 mr-6"
-                         data-aos="fade-left"
+                            data-aos="fade-left"
                         >
                             যেকোন কারণেই আকস্মিকভাবে আগুন লেগে যেতে পারে, তবে সেই আগুনকে <br />  <span>ছোট</span> অবস্থায়ই নিভিয়ে ফেলতে হবে। এজন্য আগুন নিভানোর প্রয়োজনীয় সরঞ্জাম <br /> হাতের নাগালে রাখা অত্যন্ত গুরুত্বপূর্ণ
 
                         </h4>
                         <h4 className="md:hidden text-l py-2  text-white text-center font-bold   mt-4 mr-6"
-                         data-aos="fade-left"
+                            data-aos="fade-left"
                         >
-                            যেকোন কারণেই আকস্মিকভাবে আগুন লেগে যেতে পারে, তবে সেই আগুনকে  
+                            যেকোন কারণেই আকস্মিকভাবে আগুন লেগে যেতে পারে, তবে সেই আগুনকে
                             ছোট অবস্থায়ই নিভিয়ে ফেলতে হবে। এজন্য আগুন নিভানোর প্রয়োজনীয় সরঞ্জাম  হাতের নাগালে রাখা অত্যন্ত গুরুত্বপূর্ণ
 
                         </h4>
@@ -147,7 +147,7 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 px-12  ">
 
                     <div className="mt-12 ml-4"
-                     data-aos="fade-right"
+                        data-aos="fade-right"
                     >
                         <img className=" w-[560px]  " src={six} alt="" />
                     </div>
@@ -177,7 +177,7 @@ const Home = () => {
             <section className="pt-5 md:pt-24  bg-red-100">
                 <div>
                     <h2 className="text-3xl font-bold my-2 text-center font-hind"
-                      data-aos="fade-right"
+                        data-aos="fade-right"
                     >
                         যেভাবে <span className="text-orange-500">Fire Stop</span> দ্বারা আগুন নিষ্ক্রিয় করবেন
                     </h2>
@@ -202,7 +202,7 @@ const Home = () => {
             <section className="pt-10 bg-red-100 py-4">
                 <div>
                     <h2 className="text-3xl font-bold my-2 text-center font-hind"
-                      data-aos="fade-right"
+                        data-aos="fade-right"
                     >
 
                         আমাদের প্রডাক্টের অরিজিনাল মেয়াদ রয়েছে <span className="text-orange-500"> ২০৩০ </span>সাল পর্যন্ত
@@ -212,7 +212,7 @@ const Home = () => {
                     </h4>
                 </div>
                 <div className="mt-12 flex justify-center  text-center"
-                  data-aos="fade-up"
+                    data-aos="fade-up"
                 >
                     <img className=" w-[360px]  " src={eight} alt="" />
 
@@ -239,7 +239,8 @@ const Home = () => {
             </section>
             {/* ten section  */}
             <section className="py-7 bg-red-100">
-                <div className="mt-12 flex justify-center  text-center">
+                <div className="mt-12 flex justify-center  text-center"
+                    data-aos="fade-left">
                     <img className=" w-[360px]  " src={ten} alt="" />
 
                 </div>
@@ -247,65 +248,21 @@ const Home = () => {
                 <div>
                     <h2 className="text-3xl font-semibold  my-4 text-center font-hind">
 
-                        
+
                         অর্ডার করতে নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন ⬇️
                     </h2>
                 </div>
                 <div className=" w-[80%] mx-auto border-2 border-black border-dashed px-2">
-                    <FormData/>
+                    <FormData />
                 </div>
             </section>
 
-            <section>
-            <div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="fire-safety-accordion" defaultChecked />
-  <div className="collapse-title text-xl font-medium">
-    অগ্নি নিরাপত্তা কি?
-  </div>
-  <div className="collapse-content">
-    <p>
-      অগ্নি নিরাপত্তা হলো এমন ব্যবস্থাগুলো যেগুলোর মাধ্যমে অগ্নিকাণ্ডের ঝুঁকি কমানো এবং অগ্নিকাণ্ডের সময় ক্ষতি নিয়ন্ত্রণ করা যায়।
-    </p>
-  </div>
-</div>
-
-<div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="fire-safety-accordion" />
-  <div className="collapse-title text-xl font-medium">
-    অগ্নিকাণ্ডের সময় কি করতে হবে?
-  </div>
-  <div className="collapse-content">
-    <p>
-      অগ্নিকাণ্ডের সময় শান্ত থাকুন, দাহ্য পদার্থ থেকে দূরে যান, নিরাপদ স্থানে আশ্রয় নিন এবং জরুরি সেবায় কল করুন।
-    </p>
-  </div>
-</div>
-
-<div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="fire-safety-accordion" />
-  <div className="collapse-title text-xl font-medium">
-    অগ্নি নির্বাপক যন্ত্র কিভাবে ব্যবহার করবেন?
-  </div>
-  <div className="collapse-content">
-    <p>
-      অগ্নি নির্বাপক যন্ত্র ব্যবহার করতে হলে প্রথমে পিন খুলুন, নোজলটি আগুনের উৎসের দিকে তাক করুন এবং লিভার চাপুন।
-    </p>
-  </div>
-</div>
-
-<div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="fire-safety-accordion" />
-  <div className="collapse-title text-xl font-medium">
-    ঘরে অগ্নি নিরাপত্তা বজায় রাখার উপায় কী?
-  </div>
-  <div className="collapse-content">
-    <p>
-      ঘরে অগ্নি নিরাপত্তা বজায় রাখতে দাহ্য পদার্থ সংরক্ষণে সাবধান হন, বৈদ্যুতিক সরঞ্জাম নিরাপদে ব্যবহার করুন এবং ধূমপানের সময় সতর্ক থাকুন।
-    </p>
-  </div>
-</div>
-
-            </section>
+             <section className=" bg-red-100 px-12 py-5">
+             <h1 className="text-xl md:text-3xl font-semibold  my-4 text-center font-hind">
+        আগুন নিরাপত্তা সংক্রান্ত সাধারণ জিজ্ঞাসা
+      </h1>
+                <FAQAccordion/>
+             </section>
         </div>
     );
 };

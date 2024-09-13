@@ -24,7 +24,7 @@ const Main = () => {
           {/* <div >
           <Navbar />
           </div> */}
-            <div className='bg-gray-100  dark:bg-gray-800 dark:text-white min-h-[calc(100vh-68px)]'>
+            <div className='bg-gray-100  w-full mx-auto  dark:bg-gray-800 dark:text-white min-h-[calc(100vh-68px)]'>
                 <Outlet />
             </div>
             <Footer />

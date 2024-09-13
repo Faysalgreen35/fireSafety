@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
@@ -55,21 +56,22 @@ const FormData = () => {
     return (
         <div className="w-full lg:max-w-7xl ml-1 lg:mt-1 py-8 mx-auto font-hind">
             <div className="mx-auto px-4 lg:px-20">
+            <form onSubmit={handleSubmit}>
                 <div className="flex flex-wrap -mx-4 "
                 data-aos="fade-up"
                 >
                     {/* Left Section: Billing Details */}
                     <div className="w-full lg:w-1/2 px-4 mb-1 lg:mb-0">
                         <h1 className="font-bold text-2xl py-4 mb-3">Billing details</h1>
-                        <form onSubmit={handleSubmit}>
+                       
                        
                        <div className="mb-6">
-                          <label htmlFor="subject" className="block text-sm font-semibold text-gray-700">নাম*</label>
+                          <label htmlFor="name" className="block text-sm font-semibold text-gray-700">নাম*</label>
                            <input
                                     type="text"
-                                    id="subject"
-                                    name="subject"
-                                    value={formValues.subject}
+                                    id="name"
+                                    name="name"
+                                    value={formValues.name}
                                     onChange={handleChange}
 
                                     required
@@ -79,12 +81,12 @@ const FormData = () => {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="subject" className="block text-sm font-semibold text-gray-700">ইমেইল (optional)</label>
+                                <label htmlFor="email" className="block text-sm font-semibold text-gray-700">ইমেইল (optional)</label>
                                 <input
                                     type="text"
-                                    id="subject"
-                                    name="subject"
-                                    value={formValues.subject}
+                                    id="email"
+                                    name="email"
+                                    value={formValues.email}
                                     onChange={handleChange}
 
                                     required
@@ -94,12 +96,12 @@ const FormData = () => {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="subject" className="block text-sm font-semibold text-gray-700">ফোন নাম্বার*</label>
+                                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700">ফোন নাম্বার*</label>
                                 <input
                                     type="text"
-                                    id="subject"
-                                    name="subject"
-                                    value={formValues.subject}
+                                    id="phone"
+                                    name="phone"
+                                    value={formValues.phone}
                                     onChange={handleChange}
 
                                     required
@@ -109,12 +111,12 @@ const FormData = () => {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="subject" className="block text-sm font-semibold text-gray-700">জেলা*</label>
+                                <label htmlFor="district" className="block text-sm font-semibold text-gray-700">জেলা*</label>
                                 <input
                                     type="text"
-                                    id="subject"
-                                    name="subject"
-                                    value={formValues.subject}
+                                    id="district"
+                                    name="district"
+                                    value={formValues.district}
                                     onChange={handleChange}
 
                                     required
@@ -124,12 +126,12 @@ const FormData = () => {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="subject" className="block text-sm font-semibold text-gray-700">সম্পূর্ণ ঠিকানা*</label>
+                                <label htmlFor="address" className="block text-sm font-semibold text-gray-700">সম্পূর্ণ ঠিকানা*</label>
                                 <input
                                     type="text"
-                                    id="subject"
-                                    name="subject"
-                                    value={formValues.subject}
+                                    id="address"
+                                    name="address"
+                                    value={formValues.address}
                                     onChange={handleChange}
 
                                     required
@@ -140,7 +142,7 @@ const FormData = () => {
                             </div>
                             {/* Add other fields like email, phone, etc. */}
                        
-                            </form>
+                            
                     </div>
 
                     {/* Right Section: Product Selection */}
@@ -213,6 +215,7 @@ const FormData = () => {
                         </button>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     );
